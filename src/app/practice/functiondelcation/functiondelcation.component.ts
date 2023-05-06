@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-functiondelcation',
   templateUrl: './functiondelcation.component.html',
@@ -111,4 +112,6 @@ export class FunctiondelcationComponent implements OnInit {
    console.warn(id);
    this.list=this.list.filter(item=>item.id !==id);
   }
+
+  // two way binding
 }

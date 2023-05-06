@@ -74,7 +74,7 @@
   -->
 
   <!-- to do task  -->
-  <br><br>
+  <!-- <br><br>
   <input type="text" class="border border-gray-300" placeholder="enter your task" #task >
               
   <br><br>
@@ -91,4 +91,9 @@
 
     </li>
   </ul>
-  
+   -->
+
+   <!-- two way binding -->
+
+   <input type="text" class="border border-gray-300" placeholder="two way binding" [(ngModel)]="name" >
+   <h1>{{name}}</h1>

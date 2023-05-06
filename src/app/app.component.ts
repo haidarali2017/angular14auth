@@ -12,11 +12,13 @@ export class AppComponent {
   //  updateChild(){
   //   this.parent_data_pass_to_child=Math.floor(Math.random()*10);
   //  }
-   dataset="x";
-   updateData(item:string){
-    console.warn(item)
-    this.dataset=item;
-   }
+
+    //  send data child to parent
+  //  dataset="x";
+  //  updateData(item:string){
+  //   console.warn(item)
+  //   this.dataset=item;
+  //  }
 
 
 

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FunctiondelcationComponent } from './functiondelcation/functiondelcation.component';
 import { HeaderComponent } from './header/header.component';
 import { ChildComponent } from './child/child.component';
+import {FormsModule} from '@angular/forms';
 
 
 
@@ -13,7 +14,8 @@ import { ChildComponent } from './child/child.component';
     ChildComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports:[
     FunctiondelcationComponent,
