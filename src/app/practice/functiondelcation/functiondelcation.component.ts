@@ -93,4 +93,10 @@ export class FunctiondelcationComponent implements OnInit {
     this.color='red';
    }
 
+  //  toggleButton
+  displayToggle=true;
+  toggleButton(){
+    // alert(3);
+    this.displayToggle=!this.displayToggle;
+  }
 }
