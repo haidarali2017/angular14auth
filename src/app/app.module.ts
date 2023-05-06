@@ -4,6 +4,7 @@ import {UserAuthModule} from './user-auth/user-auth.module';
 import {PracticeModule} from './practice/practice.module';
 import {AppComponent } from './app.component';
 import { UsdBdtPipe } from './pipes/usd-bdt.pipe';
+import {FormsModule} from '@angular/forms';
 
  
 @NgModule({
@@ -17,6 +18,7 @@ import { UsdBdtPipe } from './pipes/usd-bdt.pipe';
     BrowserModule,
     UserAuthModule,
     PracticeModule,
+    FormsModule
    
   ],
   providers: [],
