@@ -1,0 +1,67 @@
+<!-- get valu parameter  -->
+<button (click)="getName(123)" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+    click me
+  </button>
+
+  <!-- get value -->
+  <input type="text" #box (keyup)="getValue(box.placeholder)" placeholder="enter anything" name="name"> 
+  <p>
+    input value : {{display}}
+  </p>
+
+  <!-- counter  -->
+  <button (click)="counter('minus')" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">--</button>
+ <p class="heading">count: {{count}} </p>
+ <button (click)="counter('add')" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">++</button>
+
+<br>
+<!-- property binding   -->
+ <input type="text" value="{{name}}"  disabled="{{disable}}">
+ <br>
+
+ <input type="text" [value]=name [disabled]=false>
+
+ <br>
+
+ <!-- if else  -->
+ <h1 *ngIf="show=='yes' then trueblock else elseblock" > </h1>
+
+
+<ng-template #trueblock>
+  true block
+</ng-template>
+ <ng-template #elseblock>
+   else block
+ </ng-template>
+
+ <br>
+
+ <!-- loop  -->
+
+ <ul>
+  <li *ngFor="let item of friendslist">
+	The {{item.name}} and {{item.age}} is here
+  </li>
+</ul>
+
+<ul *ngFor="let user of users">
+  <li >
+    name : {{user.name}}  
+  </li>
+  <li >
+     phone :{{user.phone}}
+  </li>
+  <li >
+    <ul *ngFor="let account of user.socialAcount">
+      <li>{{account}}</li>
+    </ul>
+
+  </li>
+</ul>
+
+<!-- style binding  -->
+
+<h2  [style.color]="color">style binding</h2>
+
+<button (click)="updateColor()" class="bg-blue-500">update color </button>
+ 
