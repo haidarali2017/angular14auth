@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-14';
-
-   
+  // parent_data_pass_to_child
+   parent_data_pass_to_child=10;
   
 }
