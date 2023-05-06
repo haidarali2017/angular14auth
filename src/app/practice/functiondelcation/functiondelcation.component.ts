@@ -113,5 +113,14 @@ export class FunctiondelcationComponent implements OnInit {
    this.list=this.list.filter(item=>item.id !==id);
   }
 
-  // two way binding
+//  PIPES
+ data="hello haidar";
+
+  todaysdate=Date();
+
+
+  user={
+    name:'haidar',
+    age:28
+  }
 }

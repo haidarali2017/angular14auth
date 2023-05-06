@@ -94,6 +94,23 @@
    -->
 
    <!-- two way binding -->
-
+<!-- 
    <input type="text" class="border border-gray-300" placeholder="two way binding" [(ngModel)]="name" >
-   <h1>{{name}}</h1>
+   <h1>{{name}}</h1> -->
+
+   <!-- PIPES -->
+
+   {{data | uppercase}}
+   <br>
+   {{data | lowercase}}
+   <br>
+   {{data | slice:3:6 |uppercase}}
+   <br>
+   {{todaysdate | date:'fullDate'}}
+   <br>
+   {{user |json |uppercase}}
+
+   {{"hello how are you" | titlecase}}
+
+
+
