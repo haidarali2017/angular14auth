@@ -1,9 +1,14 @@
 
+ {{title}}
+<!-- <app-header></app-header> -->
+
+<!-- parent to child data send  -->
+<!-- <app-child [item]="parent_data_pass_to_child"></app-child>
+<button (click)="updateChild()" class="border border-gray-300" >updatechild</button> -->
  
-<app-header></app-header>
-<app-child [item]="parent_data_pass_to_child"></app-child>
-<button (click)="updateChild()" class="border border-gray-300" >updatechild</button>
- 
+<!-- child to parent data send -->
+<app-child (updateDataEvent)="updateData($event)"></app-child>
+{{dataset}}
  <!-- <app-functiondelcation></app-functiondelcation> -->
 <!-- <app-signup></app-signup>
 <app-login></app-login> -->

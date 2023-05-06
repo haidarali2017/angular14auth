@@ -1,3 +1,7 @@
-<p>{{item}}</p>
+<!-- <p>{{item}}</p>
 
-<h1>send data child to parents </h1>
+<h1>send data child to parents </h1> -->
+<br><br>
+<input type="tex" placeholder="send Data child to parent component" class="border border-gray-300" #box />
+<br><br>
+<button (click)="updateDataEvent.emit(box.value)" class="border border-gray-300 button round">Update data</button>
