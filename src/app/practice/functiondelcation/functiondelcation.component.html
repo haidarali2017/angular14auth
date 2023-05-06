@@ -67,8 +67,28 @@
 
 <!-- toggle element -->
 
-<button (click)="toggleButton()" class="bg-blue-500">toggleButton </button>
+<!-- <button (click)="toggleButton()" class="bg-blue-500">toggleButton </button>
 <div *ngIf="displayToggle">
   <h1>hello toggle element </h1>
 </div>
- 
+  -->
+
+  <!-- to do task  -->
+  <br><br>
+  <input type="text" class="border border-gray-300" placeholder="enter your task" #task >
+              
+  <br><br>
+  <button (click)="addTask(task.value)" class="bg-transparent hover:bg-blue-500 text-blue-700 
+  font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+    Button
+  </button>
+
+  <ul *ngFor="let item of list">
+    <li>{{item.name}}
+      <button (click)="removeTask(item.id)"  class="border border-gray-300"  >
+        remove
+      </button>
+
+    </li>
+  </ul>
+  
