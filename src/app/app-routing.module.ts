@@ -5,7 +5,9 @@ import {LoginComponent} from './user-auth/login/login.component';
 import {SignupComponent} from './user-auth/signup/signup.component';
 import { HomeComponent } from './home/home/home.component';
 import {AboutComponent} from './home/about/about.component';
-import {NoPageComponent} from './home/no-page/no-page.component'
+import {NoPageComponent} from './home/no-page/no-page.component';
+import {AboutCompanyComponent} from './home/about-company/about-company.component';
+import {AboutMeComponent} from './home/about-me/about-me.component';
 
 const routes:Routes=[
   {
@@ -20,8 +22,14 @@ const routes:Routes=[
   },
   
   {
-    path:'about/:id',
-    component:AboutComponent
+    // dynamic route id get
+    // path:'about/:id',
+    path:'about',
+    component:AboutComponent,
+    children:[
+      {path:'company',component:AboutCompanyComponent},
+      {path:'me',component:AboutMeComponent}
+    ]
   },
   {
     path:'',
