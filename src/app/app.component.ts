@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UserdataService} from './services/userdata.service';
 
 @Component({
   selector: 'app-root',
@@ -22,12 +23,18 @@ export class AppComponent {
 
   // basic service data pass
 
-  memberData=[
-    {m_name:'haidar',email:"haidar@gmail.com"},
-    {m_name:'Hiya',email:"hiya@gmail.com"},
-    {m_name:'Haisam',email:"haisam@gmail.com"}
-  ]
+  // memberData=[
+  //   {m_name:'haidar',email:"haidar@gmail.com"},
+  //   {m_name:'Hiya',email:"hiya@gmail.com"},
+  //   {m_name:'Haisam',email:"haisam@gmail.com"}
+  // ]
 
+  // users:[]=[];
+  users:any='';
+  constructor(private userdata:UserdataService){
+  console.warn("userdata",userdata.users());
+  this.users=userdata.users();
+  }
 
 
 
