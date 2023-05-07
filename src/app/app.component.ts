@@ -20,6 +20,14 @@ export class AppComponent {
   //   this.dataset=item;
   //  }
 
+  // basic service data pass
+
+  memberData=[
+    {m_name:'haidar',email:"haidar@gmail.com"},
+    {m_name:'Hiya',email:"hiya@gmail.com"},
+    {m_name:'Haisam',email:"haisam@gmail.com"}
+  ]
+
 
 
 

@@ -6,6 +6,7 @@ import { NoPageComponent } from './no-page/no-page.component';
 import { RouterModule } from '@angular/router';
 import { AboutCompanyComponent } from './about-company/about-company.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -17,7 +18,9 @@ import { AboutMeComponent } from './about-me/about-me.component';
     AboutComponent,
     NoPageComponent,
     AboutCompanyComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    FooterComponent,
+  
   ],
   imports: [
     CommonModule,RouterModule
@@ -25,7 +28,8 @@ import { AboutMeComponent } from './about-me/about-me.component';
   exports:[
     HomeComponent,
     AboutComponent,
-    NoPageComponent
+    NoPageComponent,
+    FooterComponent
   ]
 
 })

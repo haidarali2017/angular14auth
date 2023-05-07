@@ -3,6 +3,15 @@
  
 
 <app-header></app-header>
+
+<ul>
+  <li *ngFor="let data of memberData">
+
+    {{data.m_name}}
+  </li>
+</ul>
+
+<app-footer></app-footer>
 <!-- <app-no-page></app-no-page> -->
 <!-- parent to child data send  -->
 <!-- <app-child [item]="parent_data_pass_to_child"></app-child>
