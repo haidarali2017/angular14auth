@@ -4,7 +4,8 @@ import {RouterModule,Routes} from '@angular/router';
 import {LoginComponent} from './user-auth/login/login.component';
 import {SignupComponent} from './user-auth/signup/signup.component';
 import { HomeComponent } from './home/home/home.component';
-import {AboutComponent} from './home/about/about.component'
+import {AboutComponent} from './home/about/about.component';
+import {NoPageComponent} from './home/no-page/no-page.component'
 
 const routes:Routes=[
   {
@@ -26,6 +27,10 @@ const routes:Routes=[
     path:'',
     component:HomeComponent
   },
+  {
+    path:'**',
+    component:NoPageComponent
+  }
 ];
 
 
