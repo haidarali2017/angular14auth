@@ -8,7 +8,7 @@ import {AboutComponent} from './home/about/about.component';
 import {NoPageComponent} from './home/no-page/no-page.component';
 import {AboutCompanyComponent} from './home/about-company/about-company.component';
 import {AboutMeComponent} from './home/about-me/about-me.component';
-
+ 
 const routes:Routes=[
   {
     path:'login',

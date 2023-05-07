@@ -30,12 +30,20 @@ export class AppComponent {
   // ]
 
   // users:[]=[];
-  users:any='';
-  constructor(private userdata:UserdataService){
-  console.warn("userdata",userdata.users());
-  this.users=userdata.users();
-  }
-
+  // users:any='';
+  // constructor(private userdata:UserdataService){
+  // console.warn("userdata",userdata.users());
+  // this.users=userdata.users();
+  // }
+   
+  // post:any;
+  // constructor(private postData:UserdataService){
+  //     // console.warn('post data is ', );
+  //     postData.postdata().subscribe((data)=>{
+  //       console.warn("data",data);
+  //       this.post=data;
+  //     })
+  // }
 
 
 }

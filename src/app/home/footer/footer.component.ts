@@ -15,11 +15,11 @@ export class FooterComponent implements OnInit {
   ]
 
 
-  users:any='';
-  constructor(private userdata:UserdataService){
-  console.warn("userdata",userdata.users());
-  this.users=userdata.users();
-  }
+  // users:any='';
+  // constructor(private userdata:UserdataService){
+  // console.warn("userdata",userdata.users());
+  // this.users=userdata.users();
+  // }
 
 
   ngOnInit(): void {

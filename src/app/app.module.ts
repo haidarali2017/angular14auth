@@ -12,6 +12,7 @@ import { UsdBdtPipe } from './pipes/usd-bdt.pipe';
 import { RedElDirective } from './red-el.directive';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
+import {HttpClientModule} from '@angular/common/http'
 
  
 @NgModule({
@@ -29,7 +30,8 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     AppRoutingModule,
     HomeModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
    
   ],
   providers: [],
