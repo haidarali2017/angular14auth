@@ -19,7 +19,7 @@ const routes:Routes=[
   },
   
   {
-    path:'about',
+    path:'about/:id',
     component:AboutComponent
   },
   {
