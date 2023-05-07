@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserdataService {
-
+  private signUpFormData: any;
   constructor(private http: HttpClient  ) { }
   // users(){
   //   return[
@@ -19,4 +19,17 @@ export class UserdataService {
     return this.http.get(this.url);
     
   }
+
+
+  saveUsers(data:any): void
+  {
+     this.signUpFormData = data;
+    // return this.http.get(this.url,data);
+    // console.warn(this.signUpFormData);
+
+  }
+  public getSignUpFormData(): any {
+    return this.signUpFormData;
+  }
+
 }

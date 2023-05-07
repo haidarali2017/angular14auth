@@ -8,6 +8,7 @@ import {AboutComponent} from './home/about/about.component';
 import {NoPageComponent} from './home/no-page/no-page.component';
 import {AboutCompanyComponent} from './home/about-company/about-company.component';
 import {AboutMeComponent} from './home/about-me/about-me.component';
+import {PostComponent} from './home/post/post.component'
  
 const routes:Routes=[
   {
@@ -32,9 +33,14 @@ const routes:Routes=[
     ]
   },
   {
+    path:'post/:id',
+    component:PostComponent
+  },
+  {
     path:'',
     component:HomeComponent
   },
+ 
   {
     path:'**',
     component:NoPageComponent

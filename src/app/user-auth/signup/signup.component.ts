@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
+import {UserdataService} from '../../services/userdata.service'
+ 
 
 @Component({
   selector: 'app-signup',
@@ -8,14 +10,22 @@ import {NgForm} from '@angular/forms';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
-
+  signUpFormData: any;
+  constructor(private userdataService:UserdataService ) 
+  {
+    this.signUpFormData = this.userdataService.getSignUpFormData();
+        // console.warn(2);
+  }
+  
   ngOnInit(): void {
   }
 
-  userData:any={}
-  getData(data:NgForm){
-    console.warn(data);
-    this.userData=data;
+  // formData:any={}
+  geUserData(formData:NgForm){
+    // console.warn(data);
+    // this.formData=data;
+    this.userdataService.saveUsers(formData);
   }
+
+  
 }

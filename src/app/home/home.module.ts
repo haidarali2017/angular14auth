@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AboutCompanyComponent } from './about-company/about-company.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { FooterComponent } from './footer/footer.component';
+import { PostComponent } from './post/post.component';
 
 
 
@@ -20,6 +21,7 @@ import { FooterComponent } from './footer/footer.component';
     AboutCompanyComponent,
     AboutMeComponent,
     FooterComponent,
+    PostComponent,
   
   ],
   imports: [
@@ -29,7 +31,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     AboutComponent,
     NoPageComponent,
-    FooterComponent
+    FooterComponent,
+    PostComponent
   ]
 
 })

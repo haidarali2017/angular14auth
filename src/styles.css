@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.footer{
+    position: absolute;
+    background-color: skyblue;
+    width: 100%;
+    
+    bottom: -92px;
+    /* top: 100%; */
+    padding: 10px;
+    color: #fff;
+}

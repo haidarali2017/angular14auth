@@ -16,4 +16,7 @@ export class PostService {
     // console.warn('data',url);
     return this.http.get(url);
   }
+
+
+  
 }
