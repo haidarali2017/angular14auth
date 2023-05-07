@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
+
 import {UserAuthModule} from './user-auth/user-auth.module';
 import {PracticeModule} from './practice/practice.module';
+import {HomeModule} from './home/home.module'
+
 import {AppComponent } from './app.component';
 import { UsdBdtPipe } from './pipes/usd-bdt.pipe';
-import {FormsModule} from '@angular/forms';
+
 import { RedElDirective } from './red-el.directive';
+import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
 
  
 @NgModule({
@@ -20,7 +26,10 @@ import { RedElDirective } from './red-el.directive';
     BrowserModule,
     UserAuthModule,
     PracticeModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule,
+    HomeModule,
+    RouterModule
    
   ],
   providers: [],

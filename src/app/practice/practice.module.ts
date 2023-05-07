@@ -5,6 +5,8 @@ import {ReactiveFormsModule} from '@angular/forms'
 import { FunctiondelcationComponent } from './functiondelcation/functiondelcation.component';
 import { HeaderComponent } from './header/header.component';
 import { ChildComponent } from './child/child.component';
+import { RouterModule } from '@angular/router';
+
  
 
 
@@ -18,7 +20,8 @@ import { ChildComponent } from './child/child.component';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   exports:[
     FunctiondelcationComponent,
