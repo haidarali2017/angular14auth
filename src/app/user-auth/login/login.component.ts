@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {UserdataService} from '../../services/userdata.service';
-import {LoginService} from '../../services/login.service'
+import {LoginService} from '../../services/login.service';
 import { Router } from '@angular/router';
+import {SharedServiceService } from '../../services/shared-service.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,8 @@ export class LoginComponent implements OnInit {
 
   signUpFormData: any;
   loginServiceDatacheck: any;
-  constructor(private dataService: UserdataService,private loginServiceData: LoginService,private router: Router) {
+ 
+  constructor(private dataService: UserdataService,private loginServiceData: LoginService,private router: Router,private sharedService: SharedServiceService) {
     this.signUpFormData = this.dataService.getSignUpFormData();
     // console.warn(this.dataService.getSignUpFormData());
     this.loginServiceDatacheck = this.loginServiceData.getMatchUserData();
@@ -28,6 +30,14 @@ export class LoginComponent implements OnInit {
     if (Array.isArray(signUp)) {
       if (signUp[0] ===  logarr[0] && signUp[1] ===  logarr[1]) {
         this.loginServiceData.checkUsers(loginData);
+
+        const userData = {
+          username: loginData.username,
+        };
+
+        this.sharedService.emitUserLoggedIn(userData);
+
+
         this.router.navigate(['/']);
         alert('Login successful!');
       } else {
