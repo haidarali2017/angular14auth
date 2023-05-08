@@ -16,11 +16,11 @@
                 Add Comment
             </a>
             <br>
-            <div class="flex justify-between items-center mb-6">
+          <div  *ngIf="c_comment" class="flex justify-between items-center mb-6">
               <h2 class="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white">Discussion (20)</h2>
           </div>
          
-          <article class="p-6 mb-6 text-base bg-white rounded-lg dark:bg-gray-900">
+          <article *ngIf="c_comment" class="p-6 mb-6 text-base bg-white rounded-lg dark:bg-gray-900">
               <footer class="flex justify-between items-center mb-2">
                   <div class="flex items-center">
                       <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img
@@ -33,10 +33,7 @@
              
      
               </footer>
-              <p class="text-gray-500 dark:text-gray-400">Very straight-to-point article. Really worth time reading. Thank you! But tools are just the
-                  instruments for the UX designers. The knowledge of the design tools are as important as the
-                  creation of the design strategy.</p>
-            
+              <p class="text-gray-500 dark:text-gray-400">{{c_comment}}</p>
           </article>
    
 

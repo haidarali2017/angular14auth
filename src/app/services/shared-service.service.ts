@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 })
 export class SharedServiceService  {
   private commentFormData: any;
+  private signUpFormData: any;
   constructor(private router: Router) { 
   
   }
@@ -21,8 +22,11 @@ export class SharedServiceService  {
   {
      this.commentFormData = data;
       // return this.http.get(this.url,data);
-      console.warn(this.commentFormData);
+      // console.warn(this.commentFormData);
+  }
 
+  public getSignUpFormData(): any {
+    return this.signUpFormData;
   }
 
   public getcommentFormData(): any {
