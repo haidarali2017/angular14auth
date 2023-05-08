@@ -2,6 +2,9 @@
     <img     src="assets/angular400.jpg"   alt="">
 
     <ul>
+        <li  *ngIf="username">
+            <span>Welcome, {{ username }}</span>
+        </li>
         <li><a routerLink="">Home</a></li>
         <li><a routerLink="about"> About</a></li> 
 
@@ -14,11 +17,15 @@
         <li><a routerLink="signup"> Sign up</a></li>
         <li><a routerLink=""> Users</a></li>
         <li><a routerLink="">Post </a></li>
+       
+        <li *ngIf="username">
+            <button  (click)="logout()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Logout
+            </button>
+          <!-- <a href="">Logout </a>  -->
+        </li>
     </ul>
-
+   
  </nav>
- <div>
-    <span>Welcome, {{ username }}</span>
-    <button (click)="logout()">Logout</button>
-  </div>
+
  <router-outlet></router-outlet>

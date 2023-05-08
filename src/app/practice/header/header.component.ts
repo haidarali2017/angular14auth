@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   username: any;
   constructor(private loginServiceData: LoginService,private sharedService: SharedServiceService) {
     this.loginServiceDatacheck = this.loginServiceData.getMatchUserData();
-    console.warn("test",this.loginServiceData.getMatchUserData());
+    // console.warn("test",this.loginServiceData.getMatchUserData());
    }
 
   ngOnInit(): void {
@@ -23,8 +23,13 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  logout() {
+  logout():void {
     // Logout logic
+    this.sharedService.logout();
+    // .then(() => {
+    //   window.location.reload();
+    // });
+    
   }
 
 }
