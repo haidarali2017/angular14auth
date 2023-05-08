@@ -8,7 +8,8 @@ import {AboutComponent} from './home/about/about.component';
 import {NoPageComponent} from './home/no-page/no-page.component';
 import {AboutCompanyComponent} from './home/about-company/about-company.component';
 import {AboutMeComponent} from './home/about-me/about-me.component';
-import {PostComponent} from './home/post/post.component'
+import {PostComponent} from './home/post/post.component';
+import {AddCommentComponent}  from './home/add-comment/add-comment.component';
  
 const routes:Routes=[
   {
@@ -21,7 +22,10 @@ const routes:Routes=[
     component:SignupComponent
 
   },
-  
+  {
+    path:'addcomment',
+    component:AddCommentComponent
+  },
   {
     // dynamic route id get
     // path:'about/:id',
@@ -40,7 +44,6 @@ const routes:Routes=[
     path:'',
     component:HomeComponent
   },
- 
   {
     path:'**',
     component:NoPageComponent

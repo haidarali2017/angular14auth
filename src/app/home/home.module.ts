@@ -8,6 +8,7 @@ import { AboutCompanyComponent } from './about-company/about-company.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { FooterComponent } from './footer/footer.component';
 import { PostComponent } from './post/post.component';
+import { AddCommentComponent } from './add-comment/add-comment.component';
 
 
 
@@ -22,6 +23,7 @@ import { PostComponent } from './post/post.component';
     AboutMeComponent,
     FooterComponent,
     PostComponent,
+    AddCommentComponent,
   
   ],
   imports: [
@@ -32,7 +34,8 @@ import { PostComponent } from './post/post.component';
     AboutComponent,
     NoPageComponent,
     FooterComponent,
-    PostComponent
+    PostComponent,
+    AddCommentComponent
   ]
 
 })

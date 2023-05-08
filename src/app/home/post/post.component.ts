@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-post',
@@ -11,7 +12,7 @@ export class PostComponent implements OnInit {
 
  
   postDetails: any; 
-  constructor(private route:ActivatedRoute,private http: HttpClient) { }
+  constructor(private route:ActivatedRoute,private http: HttpClient,private router: Router) { }
 
   ngOnInit(): void {
     // console.warn("post id is", this.route.snapshot.paramMap.get('id'));
@@ -29,6 +30,11 @@ export class PostComponent implements OnInit {
       this.postDetails = response;
       console.warn('details',this.postDetails);  
     });
+  }
+
+
+  goescommentpage(){
+    this.router.navigate(['/addcomment']);
   }
 
 }
