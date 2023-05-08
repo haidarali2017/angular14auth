@@ -9,6 +9,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { FooterComponent } from './footer/footer.component';
 import { PostComponent } from './post/post.component';
 import { AddCommentComponent } from './add-comment/add-comment.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -27,7 +28,8 @@ import { AddCommentComponent } from './add-comment/add-comment.component';
   
   ],
   imports: [
-    CommonModule,RouterModule
+    CommonModule,RouterModule,
+    FormsModule
   ],
   exports:[
     HomeComponent,

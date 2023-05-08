@@ -7,7 +7,7 @@ import {UserdataService} from './services/userdata.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'child  to parent data send';
+  title = '';
   // parent_data_pass_to_child
   //  parent_data_pass_to_child=10;
   //  updateChild(){

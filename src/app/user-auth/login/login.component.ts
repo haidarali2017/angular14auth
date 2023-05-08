@@ -32,12 +32,12 @@ export class LoginComponent implements OnInit {
         this.loginServiceData.checkUsers(loginData);
 
         const userData = {
+          userId: loginData.id,
           username: loginData.username,
         };
 
         this.sharedService.emitUserLoggedIn(userData);
-
-
+        
         this.router.navigate(['/']);
         alert('Login successful!');
       } else {

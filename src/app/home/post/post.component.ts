@@ -24,17 +24,20 @@ export class PostComponent implements OnInit {
 
   fetchPostDetails() {
     const postId =this.route.snapshot.paramMap.get('id');   
-     console.warn(postId);
+    //  console.warn(postId);
     const url = `https://jsonplaceholder.typicode.com/posts/${postId}`;  
     this.http.get(url).subscribe((response) => {
       this.postDetails = response;
-      console.warn('details',this.postDetails);  
+      // console.warn('details',this.postDetails);  
     });
   }
 
-
-  goescommentpage(){
-    this.router.navigate(['/addcomment']);
+ 
+  goescommentpage(eventData:any){
+    // alert(eventData);
+    const postId =this.route.snapshot.paramMap.get('id'); 
+    // alert(postId);
+    this.router.navigate(['/addcomment', postId]);
   }
 
 }

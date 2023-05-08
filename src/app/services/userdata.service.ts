@@ -18,7 +18,7 @@ export class UserdataService {
   
  url ='https://jsonplaceholder.typicode.com/posts';
   postdata(){
-      console.warn("data",this.http.get(this.url));
+      // console.warn("data",this.http.get(this.url));
     return this.http.get(this.url);
     
   }

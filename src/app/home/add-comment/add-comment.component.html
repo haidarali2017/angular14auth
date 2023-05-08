@@ -6,20 +6,21 @@
        
         <div class="max-w-5xl mx-auto px-4">
              
-           <form class="mb-6">
+           <!-- <form class="mb-6" #addCommentForm="ngForm" (ngSubmit)="saveComment(addCommentForm.value)" > -->
+            <form class="mb-6"  (ngSubmit)="submitComment()">
               <div class="py-2 px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
                   <label for="comment" class="sr-only">Your comment</label>
-                  <textarea id="comment" rows="6"
+                  <textarea  rows="6"  [(ngModel)]="comment" name="comment"
                       class="px-0 w-full text-sm text-gray-900 border-0 focus:ring-0 focus:outline-none dark:text-white dark:placeholder-gray-400 dark:bg-gray-800"
                       placeholder="Write a comment..." required></textarea>
               </div>
-              <button type="submit"
+              <button type="submit" 
                   class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                   Post comment
               </button>
           </form>  
       
-
+          <router-outlet></router-outlet>
         </div>
       </section>
 </div>

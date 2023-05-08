@@ -23,7 +23,7 @@ const routes:Routes=[
 
   },
   {
-    path:'addcomment',
+    path:'addcomment/:postId',
     component:AddCommentComponent
   },
   {
