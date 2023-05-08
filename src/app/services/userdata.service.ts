@@ -7,6 +7,7 @@ import {HttpClient} from '@angular/common/http';
 export class UserdataService {
   private signUpFormData: any;
   constructor(private http: HttpClient  ) { }
+
   // users(){
   //   return[
   //     {name:'haidar',age:28,email:'haidar@gmail.com'},
@@ -14,6 +15,7 @@ export class UserdataService {
   //     {name:'haisam',age:28,email:'hiya@gmail.com'},
   //   ]
   // }
+  
  url ='https://jsonplaceholder.typicode.com/posts';
   postdata(){
       console.warn("data",this.http.get(this.url));

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
-import {UserdataService} from '../../services/userdata.service'
+import {UserdataService} from '../../services/userdata.service';
+import { Router } from '@angular/router';
  
 
 @Component({
@@ -11,7 +12,7 @@ import {UserdataService} from '../../services/userdata.service'
 export class SignupComponent implements OnInit {
 
   signUpFormData: any;
-  constructor(private userdataService:UserdataService ) 
+  constructor(private userdataService:UserdataService,private router: Router ) 
   {
     this.signUpFormData = this.userdataService.getSignUpFormData();
       // console.warn(2);
@@ -25,6 +26,8 @@ export class SignupComponent implements OnInit {
     // console.warn(data);
     // this.formData=data;
     this.userdataService.saveUsers(formData);
+    this.router.navigate(['/login']);
+    alert('Save successful!');
   }
 
   
