@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   constructor(private postData:UserdataService){
       // console.warn('post data is ', );
       postData.postdata().subscribe((data)=>{
-        console.warn("data",data);
+        // console.warn("data",data);
         this.post=data;
       })
   }

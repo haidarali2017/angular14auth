@@ -14,7 +14,7 @@ export class SignupComponent implements OnInit {
   constructor(private userdataService:UserdataService ) 
   {
     this.signUpFormData = this.userdataService.getSignUpFormData();
-        // console.warn(2);
+      // console.warn(2);
   }
   
   ngOnInit(): void {
