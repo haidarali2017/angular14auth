@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PostComponent } from './post/post.component';
 import { AddCommentComponent } from './add-comment/add-comment.component';
 import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -29,7 +30,8 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,RouterModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   exports:[
     HomeComponent,

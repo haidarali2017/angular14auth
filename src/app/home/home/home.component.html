@@ -1,25 +1,39 @@
  
 <main class="container mx-auto my-8 px-4">
     <div class="flex flex-wrap -mx-4">
-      <div *ngFor="let post of post" class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/5 px-4 mb-8">
+      <div *ngFor="let post of posts | paginate:{
+        itemsPerPage:tableSize,
+        currentPage:page,
+        totalItems:count}; let i =index" class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/5 px-4 mb-8">
         <div class="bg-white rounded-lg shadow-lg p-6">
-            <a routerLink="post/{{post.id}}">
+            
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> {{post.title}}</h5>
                 <p class="font-normal text-gray-700 dark:text-gray-400"> {{post.body}}</p>
-            </a>
+             
+            <a  routerLink="post/{{post.id}}" style="color:blueviolet" > More Details ...</a>
         </div>
       </div>
+
+      <!-- <pagination-contorl
+      previousLabel="Prev"
+
+      nextLabel="next"
+      (pageChange)="onTableDataChange($event)"
+      >
+
+      </pagination-contorl> -->
     </div>
+   
 
   
-    <div class="flex justify-center mt-8">
+    <!-- <div class="flex justify-center mt-8">
       <nav class="inline-flex rounded-md shadow">
         <a href="#" class="px-4 py-2 bg-gray-200 text-gray-800 hover:bg-gray-300">1</a>
         <a href="#" class="px-4 py-2 bg-gray-200 text-gray-800 hover:bg-gray-300">2</a>
         <a href="#" class="px-4 py-2 bg-gray-200 text-gray-800 hover:bg-gray-300">3</a>
     
       </nav>
-    </div>
+    </div> -->
   </main>
 
  

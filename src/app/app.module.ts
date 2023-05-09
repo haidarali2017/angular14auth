@@ -4,7 +4,7 @@ import {FormsModule} from '@angular/forms';
 
 import {UserAuthModule} from './user-auth/user-auth.module';
 import {PracticeModule} from './practice/practice.module';
-import {HomeModule} from './home/home.module'
+import {HomeModule} from './home/home.module';
 
 import {AppComponent } from './app.component';
 import { UsdBdtPipe } from './pipes/usd-bdt.pipe';
@@ -13,6 +13,7 @@ import { RedElDirective } from './red-el.directive';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http'
+import { NgxPaginationModule } from 'ngx-pagination';
 
  
 @NgModule({
@@ -31,7 +32,8 @@ import {HttpClientModule} from '@angular/common/http'
     AppRoutingModule,
     HomeModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
    
   ],
   providers: [],
