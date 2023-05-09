@@ -30,5 +30,10 @@ export class SignupComponent implements OnInit {
     alert('Save successful!');
   }
 
+
+   goeslogin(){
+    this.router.navigate(['/login']);
+   }
+
   
 }

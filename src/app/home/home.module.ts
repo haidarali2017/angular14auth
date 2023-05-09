@@ -11,7 +11,8 @@ import { PostComponent } from './post/post.component';
 import { AddCommentComponent } from './add-comment/add-comment.component';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
-
+import { PaginationContorlComponent } from './pagination-contorl/pagination-contorl.component';
+ 
 
 
 
@@ -26,6 +27,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     FooterComponent,
     PostComponent,
     AddCommentComponent,
+    PaginationContorlComponent,
   
   ],
   imports: [
@@ -39,7 +41,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     NoPageComponent,
     FooterComponent,
     PostComponent,
-    AddCommentComponent
+    AddCommentComponent,
+    PaginationContorlComponent
   ]
 
 })
